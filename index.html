@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peta Dunia</title>
+    <style>
+        #world-map-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            background: #f0f8ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="world-map-container">
+        <canvas id="world-map"></canvas>
+    </div>
+
+    <!-- Load library dan data peta -->
+    <script src="mapdata.js"></script>
+    <script src="worldmap.js"></script>
+    
+    <!-- Inisialisasi peta -->
+    <script>
+        // Pastikan nama variabel sesuai dengan isi worldmap.js
+        // Contoh umum: new SimpleMap("canvas_id", mapData)
+        window.onload = function() {
+            new SimpleMap("world-map", mapData);
+        };
+    </script>
+</body>
+</html>
